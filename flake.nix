@@ -17,7 +17,7 @@
         src = self;
         format = "pyproject";
         nativeBuildInputs = [pkgs.python3Packages.setuptools];
-        propagatedBuildInputs = with pkgs.python3Packages; [requests tkinter xdg-base-dirs];
+        propagatedBuildInputs = with pkgs.python3Packages; [requests tkinter xdg-base-dirs pkgs.wl-clipboard-x11];
       };
     in {
       packages.quicktranslate = mypkg;
@@ -26,8 +26,6 @@
         packages = with pkgs; [
           (python3.withPackages (ps: [
             mypkg
-            ps.autopep8
-            ps.flake8
           ]))
         ];
       };
