@@ -1,0 +1,25 @@
+[build-system]
+requires = ["setuptools>=42.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+
+[project]
+authors = [
+  { name = "Mathieu Moalic", email = "matmoa@amu.edu.pl" },
+]
+name = "quicktranslate"
+requires-python = ">=3.8"
+dependencies = [
+    "requests",
+    "xdg-base-dirs",
+]
+version = "0.0.1"
+readme = "README.md"
+description = "A Python package that can expend your mx3 templates"
+
+[project.scripts]
+quicktranslate= "quicktranslate:entrypoint"
+
+
+[tool.pyright]
+reportOptionalMemberAccess = false
