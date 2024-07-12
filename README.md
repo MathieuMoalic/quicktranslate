@@ -6,7 +6,7 @@ You need to create a [Deepl account](https://www.deepl.com/pro-api?cta=header-pr
 
 ## Configuration
 
-You need to create a config file at $XDG_CONFIG_HOME/deeplinux/deeplinux.toml (usually $HOME/.config/deeplinux/deeplinux.toml) and add the following:
+You need to create a config file at `$XDG_CONFIG_HOME/deeplinux/deeplinux.toml` (usually `$HOME/.config/deeplinux/deeplinux.toml`) and add the following:
 
 ```ini
 [quicktranslate]
