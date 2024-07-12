@@ -1,7 +1,7 @@
 # Deeplinux:
 
 Using the Deepl API, this python script will grab the selected text with `xclip` and make a translate request to the API. It will show the translated text in a small popup window next to the mouse cursor. Left click to dismiss it.
-You need to create a (Deepl account)[https://www.deepl.com/pro-api?cta=header-pro-api], the API is free for 500 000 characters per months. If you have a pro plan, change the API endpoint accordingly in the configuration file.
+You need to create a [Deepl account](https://www.deepl.com/pro-api?cta=header-pro-api), the API is free for 500 000 characters per months. If you have a pro plan, change the API endpoint accordingly in the configuration file.
 
 
 ## Configuration
