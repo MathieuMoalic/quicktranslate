@@ -8,13 +8,17 @@ You need to create a [Deepl account](https://www.deepl.com/pro-api?cta=header-pr
 
 You need to create a config file at `$XDG_CONFIG_HOME/deeplinux/deeplinux.toml` (usually `$HOME/.config/deeplinux/deeplinux.toml`) and add the following:
 
-```ini
+```toml
 [quicktranslate]
-DEEPL_AUTH_KEY = api_key_here
-DEEPL_API_ENDPOINT = https://api-free.deepl.com/v2/translate
-TARGET_LANG = EN
+DEEPL_AUTH_KEY = "api_key_here"
+DEEPL_API_ENDPOINT = "https://api-free.deepl.com/v2/translate"
+TARGET_LANG = "EN"
 ```
 
 ## Usage
 For example, on Hyprland, you can bind it as:
 `$mod, T, exec, quicktranslate`
+
+
+### Logs
+Logs are located in `$XDG_STATE_HOME/deeplinux/deeplinux.log` (usually `$HOME/.local/state/deeplinux/deeplinux.log`)

@@ -1,5 +1,5 @@
-from .main import main
+from .main import QuickTranslateApp
 
 
 def entrypoint() -> None:
-    main()
+    QuickTranslateApp().run()
