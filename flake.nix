@@ -17,24 +17,24 @@
         devEnv = pkgs.mkShell {
           buildInputs = with pkgs; [
             fix-python.packages.${system}.default
-            python311
+            python312
             ruff
             ruff-lsp
           ];
 
           shellHook = ''
             set -euo pipefail
-            test -d .venv || (${pkgs.python311.interpreter} -m venv .venv && source .venv/bin/activate && pip install -e . && fix-python --venv .venv)
+            test -d .venv || (${pkgs.python312.interpreter} -m venv .venv && source .venv/bin/activate && pip install -e . && fix-python --venv .venv)
             source .venv/bin/activate
           '';
         };
-        mypkg = pkgs.python3Packages.buildPythonPackage {
+        mypkg = pkgs.python312Packages.buildPythonPackage {
           pname = "quicktranslate";
           version = "0.0.2";
           src = ./.;
           format = "pyproject";
-          nativeBuildInputs = [pkgs.python3Packages.setuptools];
-          propagatedBuildInputs = with pkgs.python3Packages; [requests tkinter xdg-base-dirs pkgs.wl-clipboard-x11];
+          nativeBuildInputs = [pkgs.python312Packages.setuptools];
+          propagatedBuildInputs = with pkgs.python312Packages; [requests tkinter xdg-base-dirs pkgs.wl-clipboard-x11];
         };
       in {
         devShell = devEnv;
